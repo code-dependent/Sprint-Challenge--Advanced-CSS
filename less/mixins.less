@@ -1,1 +1,18 @@
 // Mixins Here
+.flex(@justify, @align, @direction){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+    flex-direction: @direction;
+}
+.btnStyle(@color, @fontColor){
+    background: @color;
+    color: @fontColor;
+    .flex(center,center,row);
+    text-align:center;
+    font-weight:bold;
+    &:hover{
+        color:@color;
+        background:@fontColor;
+    }
+}

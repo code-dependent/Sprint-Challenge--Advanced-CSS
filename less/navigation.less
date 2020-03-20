@@ -1,1 +1,36 @@
 // Navigation code here
+.navBar{
+    width:100%;
+    height:13vh;
+    background: @nav-bg;
+    border: .1rem solid @main-border-color;
+    .flex(center, center, column);
+    @media @phone {
+        height:15vh;
+        position: sticky;
+        overflow: hidden;
+        top:0;
+        width: 100%;
+        opacity: 85%;
+    }
+
+    text-align: center;
+    h1{
+        font-size:450%
+    }
+    nav{
+        width:40%;
+        margin-top:1%;
+        .flex(space-between, center, row);
+        @media @phone {
+            width:75%;
+            margin: 1% 0;
+        }
+
+        a{
+            color:@header-font-color;
+            text-decoration: none;
+            font-size: 150%;
+        }
+    }
+}
